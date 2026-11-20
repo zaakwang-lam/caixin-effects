@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="card-main">
+    <view class="cat-label">{{card.category === 'daily' ? '日常生活' : card.category === 'social' ? '人际交往' : card.category === 'money' ? '理财有道' : '心理分析'}}</view>
+    <view class="name-row">
+      <view class="name">{{card.name}}</view>
+      <view class="source-badge">{{card.sourceType}}</view>
+    </view>
+    <view class="alias">{{card.alias}}</view>
+
+    <view class="section">
+      <view class="sec-title">📖 解释</view>
+      <view class="sec-content">{{card.explanation}}</view>
+    </view>
+    <view class="section">
+      <view class="sec-title">🎯 示例</view>
+      <view class="sec-content">{{card.example}}</view>
+    </view>
+    <view class="section">
+      <view class="sec-title">🎯 应用范围</view>
+      <view class="sec-content">{{card.scope}}</view>
+    </view>
+    <view class="section">
+      <view class="sec-title">⚠️ 不适用情况</view>
+      <view class="sec-content">{{card.limits}}</view>
+    </view>
+    <view class="section">
+      <view class="sec-title">💡 注意要点</view>
+      <view class="sec-content">{{card.cautions}}</view>
+    </view>
+    <view class="source">来源：{{card.source}}</view>
+  </view>
+
+  <view class="footer">
+    <view class="counter">{{index + 1}} / {{total}}</view>
+    <view class="dots">
+      <view class="dot {{index === idx ? 'active' : ''}}" wx:for="{{list}}" wx:for-index="idx" wx:key="id"></view>
+    </view>
+    <view class="actions">
+      <view class="btn-nav {{index === 0 ? 'disabled' : ''}}" bindtap="prev">‹</view>
+      <view class="btn-fav {{isFav ? 'active' : ''}}" bindtap="toggleFav">★</view>
+      <view class="btn-nav {{index === total - 1 ? 'disabled' : ''}}" bindtap="next">›</view>
+    </view>
+  </view>
+</view>
