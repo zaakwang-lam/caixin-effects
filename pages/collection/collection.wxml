@@ -1,0 +1,13 @@
+<view class="container">
+  <view wx:if="{{list.length === 0}}" class="empty">
+    <view>还没有收藏</view>
+    <view class="tip">在卡片页点击 ★ 即可收藏</view>
+  </view>
+  <view wx:else>
+    <view class="item" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="goCard">
+      <view class="item-name">{{item.name}}</view>
+      <view class="item-cat">{{item.category === 'daily' ? '日常生活' : item.category === 'social' ? '人际交往' : item.category === 'money' ? '理财有道' : '心理分析'}}</view>
+    </view>
+    <view class="clear" bindtap="clearAll">清空收藏</view>
+  </view>
+</view>
