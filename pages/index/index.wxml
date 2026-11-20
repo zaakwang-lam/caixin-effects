@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="title">财心效应</view>
+  <view class="subtitle">用 33 张卡片，看清决策背后的机制</view>
+
+  <view class="search-bar" bindtap="goSearch">
+    <text class="search-icon">🔍</text>
+    <text class="search-placeholder">搜索效应或场景...</text>
+  </view>
+
+  <view class="grid">
+    <view class="cat-card" wx:for="{{categories}}" wx:key="id" data-id="{{item.id}}" bindtap="goCategory" style="background: linear-gradient(135deg, {{item.color}}cc, {{item.color}});">
+      <view class="cat-name">{{item.name}}</view>
+      <view class="cat-desc">{{item.desc}}</view>
+      <view class="cat-count">{{item.count}} 张</view>
+    </view>
+  </view>
+
+  <view class="section-title">今日推荐</view>
+  <view class="card recommend" data-id="{{recommend.id}}" bindtap="goCard">
+    <view class="rec-name">{{recommend.name}}</view>
+    <view class="rec-alias">{{recommend.alias}}</view>
+    <view class="rec-exp">{{recommend.explanation}}</view>
+    <view class="tag">{{recommend.sourceType}}</view>
+  </view>
+</view>
