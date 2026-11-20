@@ -7,6 +7,29 @@
 .cat-name { font-size: 44rpx; font-weight: 700; }
 .cat-desc { font-size: 26rpx; opacity: 0.9; margin-top: 8rpx; }
 
+/* 分类切换条 */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-bottom: 28rpx;
+}
+.switcher-item {
+  font-size: 24rpx;
+  padding: 12rpx 24rpx;
+  border-radius: 50rpx;
+  background: #1a1a2e;
+  color: #8a8a9a;
+  border: 1rpx solid #2a2a3e;
+  transition: all 0.15s;
+}
+.switcher-item.on {
+  color: #fff;
+  font-weight: 600;
+  border-color: transparent;
+}
+.switcher-cnt { font-size: 20rpx; opacity: 0.75; }
+
 .list { }
 .item {
   background: #1a1a2e;

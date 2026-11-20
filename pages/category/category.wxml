@@ -4,6 +4,15 @@
     <view class="cat-desc">{{category.desc}} · {{list.length}} 张</view>
   </view>
 
+  <view class="switcher">
+    <view class="switcher-item {{activeId === item.id ? 'on' : ''}}"
+          wx:for="{{cats}}" wx:key="id"
+          data-id="{{item.id}}" bindtap="switchCat"
+          style="{{activeId === item.id ? 'background:' + item.color + ';' : ''}}">
+      {{item.name}} <text class="switcher-cnt">{{item.count}}</text>
+    </view>
+  </view>
+
   <view class="list">
     <view class="item" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="goCard">
       <view class="item-left">
