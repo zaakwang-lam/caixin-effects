@@ -1,0 +1,27 @@
+.header {
+  padding: 48rpx 32rpx;
+  border-radius: 0 0 40rpx 40rpx;
+  margin: -32rpx -32rpx 32rpx;
+  color: white;
+}
+.cat-name { font-size: 44rpx; font-weight: 700; }
+.cat-desc { font-size: 26rpx; opacity: 0.9; margin-top: 8rpx; }
+
+.list { }
+.item {
+  background: #1a1a2e;
+  border-radius: 20rpx;
+  padding: 28rpx 24rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-name { font-size: 32rpx; font-weight: 600; }
+.item-alias { font-size: 22rpx; color: #8a8a9a; margin-top: 4rpx; }
+.source-tag {
+  font-size: 20rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 12rpx;
+  color: #ccc;
+}
