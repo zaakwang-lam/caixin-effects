@@ -1,0 +1,24 @@
+.search-input {
+  background: #1a1a2e;
+  border-radius: 50rpx;
+  padding: 24rpx 32rpx;
+  margin-bottom: 40rpx;
+  color: white;
+}
+.hot-title { font-size: 28rpx; color: #8a8a9a; margin-bottom: 20rpx; }
+.hot-tags { display: flex; flex-wrap: wrap; gap: 16rpx; }
+.hot-tag {
+  background: #1a1a2e;
+  padding: 12rpx 24rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+}
+.item {
+  background: #1a1a2e;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+}
+.item-name { font-size: 32rpx; font-weight: 600; margin-bottom: 8rpx; }
+.item-exp { font-size: 26rpx; color: #aaa; line-height: 1.5; }
+.empty { text-align: center; color: #666; padding: 80rpx; }
