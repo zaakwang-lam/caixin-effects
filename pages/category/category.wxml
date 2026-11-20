@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header" style="background: linear-gradient(135deg, {{category.color}}aa, {{category.color}});">
+    <view class="cat-name">{{category.name}}</view>
+    <view class="cat-desc">{{category.desc}} · {{list.length}} 张</view>
+  </view>
+
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="goCard">
+      <view class="item-left">
+        <view class="item-name">{{item.name}}</view>
+        <view class="item-alias">{{item.alias}}</view>
+      </view>
+      <view class="source-tag" style="background: {{item.sourceType === '网络流行说法' ? '#3a2020' : '#1a2a2a'}};">
+        {{item.sourceType}}
+      </view>
+    </view>
+  </view>
+</view>
