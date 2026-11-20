@@ -1,0 +1,53 @@
+.card-main {
+  background: #1a1a2e;
+  border-radius: 32rpx;
+  padding: 40rpx 32rpx;
+  margin-bottom: 160rpx;
+}
+.cat-label {
+  font-size: 22rpx;
+  color: #e8b86d;
+  margin-bottom: 16rpx;
+}
+.name-row { display: flex; justify-content: space-between; align-items: center; }
+.name { font-size: 44rpx; font-weight: 700; }
+.source-badge {
+  background: #2a2a3e;
+  color: #aaa;
+  padding: 8rpx 16rpx;
+  border-radius: 12rpx;
+  font-size: 20rpx;
+}
+.alias { font-size: 24rpx; color: #8a8a9a; margin: 8rpx 0 32rpx; }
+
+.section { margin-bottom: 32rpx; }
+.sec-title { font-size: 26rpx; font-weight: 600; color: #e8b86d; margin-bottom: 12rpx; }
+.sec-content { font-size: 28rpx; line-height: 1.7; color: #d0d0e0; }
+
+.source { font-size: 22rpx; color: #666; margin-top: 20rpx; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0f0f1a;
+  padding: 20rpx 32rpx 40rpx;
+  border-top: 1rpx solid #2a2a3e;
+}
+.counter { text-align: center; color: #8a8a9a; font-size: 24rpx; margin-bottom: 12rpx; }
+.dots { display: flex; justify-content: center; gap: 12rpx; margin-bottom: 24rpx; }
+.dot { width: 12rpx; height: 12rpx; border-radius: 50%; background: #333; }
+.dot.active { background: #e8b86d; width: 24rpx; border-radius: 6rpx; }
+
+.actions { display: flex; justify-content: center; align-items: center; gap: 40rpx; }
+.btn-nav, .btn-fav {
+  width: 80rpx; height: 80rpx;
+  border-radius: 50%;
+  background: #1a1a2e;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 40rpx; color: #ccc;
+}
+.btn-fav { width: 96rpx; height: 96rpx; font-size: 48rpx; }
+.btn-fav.active { background: #e8b86d; color: #1a1a2e; }
+.btn-nav.disabled { opacity: 0.3; }
