@@ -1,0 +1,18 @@
+<view class="container">
+  <input class="search-input" placeholder="搜索效应名称或关键词" value="{{keyword}}" bindinput="onInput" />
+
+  <view wx:if="{{!keyword}}" class="hot">
+    <view class="hot-title">热门搜索</view>
+    <view class="hot-tags">
+      <view class="hot-tag" wx:for="{{hot}}" wx:key="*this" data-word="{{item}}" bindtap="searchHot">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="results" wx:else>
+    <view class="item" wx:for="{{results}}" wx:key="id" data-id="{{item.id}}" bindtap="goCard">
+      <view class="item-name">{{item.name}}</view>
+      <view class="item-exp">{{item.explanation}}</view>
+    </view>
+    <view wx:if="{{results.length === 0}}" class="empty">未找到相关效应</view>
+  </view>
+</view>
